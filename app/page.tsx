@@ -291,25 +291,52 @@ export default function HomePage() {
               </button>
             </div>
 
-            <div className="rounded-[2rem] border border-white/60 bg-white/80 p-6">
-              <h2 className="text-xl font-semibold text-ink">What you&apos;ll get</h2>
-              <div className="mt-5 grid gap-4 sm:grid-cols-2">
-                <ValueCard
-                  title="Recommended window"
-                  body="A practical time stretch with the best balance of comfort, precipitation risk, alerts, and air quality."
-                />
-                <ValueCard
-                  title="Planned event score"
-                  body="A direct read on your chosen event time, with a better alternate if the forecast looks rough."
-                />
-                <ValueCard
-                  title="Use caution"
-                  body="Hours that may still work if your plans are flexible and you know the tradeoffs."
-                />
-                <ValueCard
-                  title="Why this was chosen"
-                  body="Plain-English reasons so the recommendation feels transparent and practical."
-                />
+            <div className="space-y-4">
+              <aside className="rounded-[1.75rem] border border-white/60 bg-white/75 p-5 shadow-panel">
+                <p className="text-sm font-semibold text-ink">Example result</p>
+                <div className="mt-3 space-y-2 text-sm leading-7 text-slate-700">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="font-medium text-ink">Yard work</span>
+                    <span className="text-slate-400">—</span>
+                    <span>Today 3–6 PM</span>
+                    <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-emerald-700">
+                      Good
+                    </span>
+                  </div>
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span>Avoid 6–8 PM</span>
+                    <span className="text-slate-400">→</span>
+                    <span>thunderstorms develop</span>
+                  </div>
+                </div>
+                <p className="mt-3 text-sm leading-6 text-slate-600">
+                  Used for workouts, yard work, events, filming, and more.
+                </p>
+                <p className="mt-2 text-xs uppercase tracking-[0.14em] text-slate-500">
+                  Uses live weather, alerts, and air quality.
+                </p>
+              </aside>
+
+              <div className="rounded-[2rem] border border-white/60 bg-white/80 p-6">
+                <h2 className="text-xl font-semibold text-ink">What you&apos;ll get</h2>
+                <div className="mt-5 grid gap-4 sm:grid-cols-2">
+                  <ValueCard
+                    title="Recommended window"
+                    body="A practical time stretch with the best balance of comfort, precipitation risk, alerts, and air quality."
+                  />
+                  <ValueCard
+                    title="Planned event score"
+                    body="A direct read on your chosen event time, with a better alternate if the forecast looks rough."
+                  />
+                  <ValueCard
+                    title="Use caution"
+                    body="Hours that may still work if your plans are flexible and you know the tradeoffs."
+                  />
+                  <ValueCard
+                    title="Why this was chosen"
+                    body="Plain-English reasons so the recommendation feels transparent and practical."
+                  />
+                </div>
               </div>
             </div>
           </div>
