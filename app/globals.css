@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top, rgba(112, 182, 255, 0.26), transparent 32%),
+    linear-gradient(180deg, #f8fbff 0%, #eef5fb 50%, #f7fafc 100%);
+  color: #162133;
+}
+
+::selection {
+  background: rgba(31, 111, 178, 0.18);
+}
+
+.results-highlight {
+  animation: highlightFade 1.2s ease-out;
+}
+
+.results-ready-badge {
+  animation: resultsReadyFade 1.2s ease-out;
+}
+
+.result-reveal {
+  animation: resultFadeUp 300ms ease-out both;
+}
+
+.result-reveal-delay-1 {
+  animation-delay: 150ms;
+}
+
+.result-reveal-delay-2 {
+  animation-delay: 300ms;
+}
+
+@keyframes highlightFade {
+  0% {
+    box-shadow: 0 0 0 rgba(34, 197, 94, 0);
+    transform: scale(1.008);
+  }
+
+  50% {
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.18);
+  }
+
+  100% {
+    box-shadow: 0 0 0 rgba(34, 197, 94, 0);
+    transform: scale(1);
+  }
+}
+
+@keyframes resultsReadyFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+
+  20% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+}
+
+@keyframes resultFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .result-reveal,
+  .results-highlight,
+  .results-ready-badge {
+    animation: none;
+  }
+}
